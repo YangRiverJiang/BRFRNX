@@ -1,0 +1,93 @@
+file: C:\Users\80575\source\repos\BRFRNX\BRFRNX\bamf2300.obs
+duration: 2018/08/18-00:00:00.000    --->    2018/08/18-23:59:30.000
+which is 23h 59m 30.000s
+sample interval: 30s
+epoch count: 2880
+
+constellation visibility
+All: 23.10 +- 7.92, min : 16, max : 32
+ G :  9.27 +- 4.59, min :  6, max : 15
+ R :  7.53 +- 3.05, min :  4, max : 10
+ E :  6.30 +- 4.55, min :  3, max : 10
+
+obs type summerizing & missing total
+
+G01 :     917 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         C1C :  121, L1C :  126, S1C :  121, C1W :  139, C2W :  139, L2W :  139, S2W :  139, C2X :  120, L2X :  888, S2X :  888, 
+G02 :     902 epochs, C1C L1C S1C C1W C2W L2W S2W                                     L1C :   10, C1W :   17, C2W :   17, L2W :   17, S2W :   17, 
+G03 :     750 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         C1C :   24, L1C :   24, S1C :   24, C1W :   25, C2W :   25, L2W :   25, S2W :   25, C2X :   14, L2X :  740, S2X :  739, 
+G04 :     903 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         C1W :    8, C2W :    8, L2W :    8, S2W :    8, C2X :   10, L2X :  901, S2X :  901, 
+G05 :     866 epochs, C1C L1C S1C C1W C2W L2W S2W C2X                                 C1W :    9, C2W :    9, L2W :    9, S2W :    9, C2X :   29, 
+G06 :     937 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         C1C :   42, L1C :   42, S1C :   42, C1W :   48, C2W :   48, L2W :   48, S2W :   48, C2X :   45, L2X :  931, S2X :  931, 
+G07 :     797 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         C1C :   17, L1C :   17, S1C :   17, C1W :   35, C2W :   35, L2W :   35, S2W :   35, C2X :   20, L2X :  775, S2X :  775, 
+G08 :     979 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         C1C :   50, L1C :   50, S1C :   50, C1W :   87, C2W :   87, L2W :   87, S2W :   87, C2X :   71, L2X :  948, S2X :  948, 
+G09 :     751 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         C1C :   21, L1C :   21, S1C :   21, C1W :   22, C2W :   22, L2W :   22, S2W :   22, C2X :   11, L2X :  738, S2X :  738, 
+G10 :     767 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         C1C :    8, L1C :    9, S1C :    8, C1W :   15, C2W :   15, L2W :   15, S2W :   15, C2X :   12, L2X :  763, S2X :  763, 
+G11 :     865 epochs, C1C L1C S1C C1W C2W L2W S2W                                     C1W :    8, C2W :    8, L2W :    8, S2W :    8, 
+G12 :     750 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         C1C :    3, L1C :   11, S1C :    3, C1W :   12, C2W :   12, L2W :   12, S2W :   12, C2X :    9, L2X :  747, S2X :  747, 
+G13 :     810 epochs, C1C L1C S1C C1W C2W L2W S2W                                     C1W :   18, C2W :   18, L2W :   18, S2W :   18, 
+G14 :     874 epochs, C1C L1C S1C C1W C2W L2W S2W                                     C1W :   12, C2W :   12, L2W :   12, S2W :   12, 
+G15 :     909 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         C1C :   11, L1C :   12, S1C :   11, C1W :   62, C2W :   62, L2W :   62, S2W :   62, C2X :   56, L2X :  895, S2X :  895, 
+G16 :     867 epochs, C1C L1C S1C C1W C2W L2W S2W                                     C1W :   24, C2W :   24, L2W :   25, S2W :   24, 
+G17 :     932 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         C1C :    4, L1C :    7, S1C :    4, C1W :   27, C2W :   27, L2W :   27, S2W :   27, C2X :   32, L2X :  925, S2X :  925, 
+G18 :     664 epochs, C1C L1C S1C C1W C2W L2W S2W                                     C1W :   13, C2W :   13, L2W :   13, S2W :   13, 
+G19 :     855 epochs, C1C L1C S1C C1W C2W L2W S2W                                     C1W :    7, C2W :    7, L2W :    7, S2W :    7, 
+G20 :     726 epochs, C1C L1C S1C C1W C2W L2W S2W                                     C1W :   10, C2W :   10, L2W :   10, S2W :   10, 
+G21 :     749 epochs, C1C L1C S1C C1W C2W L2W S2W                                     C1W :    3, C2W :    3, L2W :    3, S2W :    3, 
+G22 :     750 epochs, C1C L1C S1C C1W C2W L2W S2W                                     L1C :    4, C1W :    5, C2W :    5, L2W :    5, S2W :    5, 
+G23 :     725 epochs, C1C L1C S1C C1W C2W L2W S2W                                     C1W :    6, C2W :    6, L2W :    6, S2W :    6, 
+G24 :     806 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         C1C :   82, L1C :   83, S1C :   82, C1W :  104, C2W :  104, L2W :  104, S2W :  104, C2X :   93, L2X :  785, S2X :  785, 
+G25 :     764 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         C1C :   54, L1C :   55, S1C :   54, C1W :   61, C2W :   61, L2W :   61, S2W :   61, C2X :   35, L2X :  738, S2X :  738, 
+G26 :     976 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         C1C :   65, L1C :   67, S1C :   65, C1W :   85, C2W :   85, L2W :   85, S2W :   85, C2X :   82, L2X :  946, S2X :  946, 
+G27 :     952 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         C1C :   94, L1C :   96, S1C :   94, C1W :  120, C2W :  120, L2W :  120, S2W :  120, C2X :   96, L2X :  925, S2X :  925, 
+G28 :     836 epochs, C1C L1C S1C C1W C2W L2W S2W                                     C1W :   12, C2W :   12, L2W :   13, S2W :   12, 
+G29 :     746 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         L1C :    2, C1W :    3, C2W :    3, L2W :    3, S2W :    3, C2X :    7, L2X :  745, S2X :  745, 
+G30 :     748 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         C1C :   23, L1C :   23, S1C :   23, C1W :   26, C2W :   26, L2W :   26, S2W :   26, C2X :   26, L2X :  742, S2X :  742, 
+G31 :     906 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         C1W :   19, C2W :   19, L2W :   19, S2W :   19, C2X :   20, L2X :  905, S2X :  905, 
+G32 :     919 epochs, C1C L1C S1C C1W C2W L2W S2W C2X L2X S2X                         C1C :   38, L1C :   39, S1C :   38, C1W :   46, C2W :   46, L2W :   46, S2W :   46, C2X :   41, L2X :  911, S2X :  911, 
+R01 :     797 epochs, C1C L1C S1C C2C L2C S2C                                         C1C :    8, L1C :    8, S1C :    8, C2C :   29, L2C :   29, S2C :   29, 
+R02 :     887 epochs, C1C L1C S1C C2C L2C S2C                                         C1C :   17, L1C :   17, S1C :   17, C2C :   30, L2C :   30, S2C :   30, 
+R03 :     944 epochs, C1C L1C S1C C2C L2C S2C                                         C1C :   21, L1C :   21, S1C :   21, C2C :   30, L2C :   30, S2C :   30, 
+R04 :    1002 epochs, C1C L1C S1C C2C L2C S2C                                         C1C :   11, L1C :   12, S1C :   11, C2C :   22, L2C :   24, S2C :   22, 
+R06 :    1064 epochs, C1C L1C S1C                                                     fully observed, 
+R07 :     934 epochs, C1C L1C S1C C2C L2C S2C                                         C1C :   17, L1C :   19, S1C :   17, C2C :   21, L2C :   27, S2C :   21, 
+R08 :     875 epochs, C1C L1C S1C C2C L2C S2C                                         C1C :   27, L1C :   30, S1C :   27, C2C :   34, L2C :   40, S2C :   34, 
+R09 :     944 epochs, C1C L1C S1C C2C L2C S2C                                         C1C :   37, L1C :   38, S1C :   37, C2C :   38, L2C :   40, S2C :   38, 
+R10 :     950 epochs, C1C L1C S1C C2C L2C S2C                                         C2C :   42, L2C :   42, S2C :   42, 
+R11 :     947 epochs, C1C L1C S1C C2C L2C S2C                                         C1C :   13, L1C :   13, S1C :   13, C2C :   44, L2C :   44, S2C :   44, 
+R12 :    1041 epochs, C1C L1C S1C                                                     fully observed, 
+R13 :     917 epochs, C1C L1C S1C C2C L2C S2C                                         C1C :    9, L1C :    9, S1C :    9, C2C :   48, L2C :   48, S2C :   48, 
+R14 :     863 epochs, C1C L1C S1C C2C L2C S2C                                         C1C :    4, L1C :    4, S1C :    4, C2C :   16, L2C :   16, S2C :   16, 
+R15 :     909 epochs, C1C L1C S1C C2C L2C S2C                                         C1C :    6, L1C :    7, S1C :    6, C2C :   93, L2C :   93, S2C :   93, 
+R16 :     972 epochs, C1C L1C S1C C2C L2C S2C                                         C1C :   15, L1C :   15, S1C :   15, C2C :   23, L2C :   23, S2C :   23, 
+R17 :     888 epochs, C1C L1C S1C C2C L2C S2C                                         C1C :    5, L1C :    6, S1C :    5, C2C :   24, L2C :   24, S2C :   24, 
+R18 :     897 epochs, C1C L1C S1C C2C L2C S2C                                         C1C :   10, L1C :   10, S1C :   10, C2C :   19, L2C :   19, S2C :   19, 
+R19 :     940 epochs, C1C L1C S1C C2C L2C S2C                                         C1C :   33, L1C :   34, S1C :   33, C2C :   24, L2C :   24, S2C :   24, 
+R20 :    1052 epochs, C1C L1C S1C C2C L2C S2C                                         C1C :    5, L1C :   19, S1C :    5, C2C :    5, L2C :   12, S2C :    5, 
+R21 :    1126 epochs, C1C L1C S1C C2C L2C S2C                                         C1C :   22, L1C :   22, S1C :   22, C2C :   24, L2C :   24, S2C :   24, 
+R22 :    1029 epochs, C1C L1C S1C C2C L2C S2C                                         C1C :   15, L1C :   16, S1C :   15, C2C :   35, L2C :   35, S2C :   35, 
+R23 :     866 epochs, C1C L1C S1C C2C L2C S2C                                         L1C :    2, C2C :   61, L2C :   61, S2C :   61, 
+R24 :     836 epochs, C1C L1C S1C C2C L2C S2C                                         C2C :  197, L2C :  197, S2C :  197, 
+E01 :     995 epochs, C1X L1X S1X                                                     C1X :   11, L1X :   11, S1X :   11, 
+E02 :     844 epochs, C1X L1X S1X                                                     C1X :   64, L1X :   64, S1X :   64, 
+E03 :     839 epochs, C1X L1X S1X                                                     C1X :   20, L1X :   20, S1X :   20, 
+E04 :     723 epochs, C1X L1X S1X                                                     C1X :    4, L1X :    4, S1X :    4, 
+E05 :     516 epochs, C1X L1X S1X                                                     C1X :   28, L1X :   28, S1X :   28, 
+E07 :    1259 epochs, C1X L1X S1X                                                     C1X :  172, L1X :  172, S1X :  172, 
+E08 :    1001 epochs, C1X L1X S1X                                                     C1X :  110, L1X :  110, S1X :  110, 
+E09 :     430 epochs, C1X L1X S1X                                                     C1X :   26, L1X :   26, S1X :   26, 
+E11 :     423 epochs, C1X L1X S1X                                                     C1X :    5, L1X :    5, S1X :    5, 
+E12 :     808 epochs, C1X L1X S1X                                                     C1X :   41, L1X :   41, S1X :   41, 
+E14 :     599 epochs, C1X L1X S1X                                                     fully observed, 
+E18 :     884 epochs, C1X L1X S1X                                                     C1X :   37, L1X :   37, S1X :   37, 
+E19 :     977 epochs, C1X L1X S1X                                                     C1X :   13, L1X :   13, S1X :   13, 
+E20 :     978 epochs, C1X L1X S1X                                                     L1X :    4, 
+E21 :    1000 epochs, C1X L1X S1X                                                     C1X :   28, L1X :   28, S1X :   28, 
+E24 :     849 epochs, C1X L1X S1X                                                     C1X :  115, L1X :  116, S1X :  115, 
+E25 :     932 epochs, C1X L1X S1X                                                     C1X :   48, L1X :   48, S1X :   48, 
+E26 :    1369 epochs, C1X L1X S1X                                                     C1X :   44, L1X :   44, S1X :   44, 
+E27 :     980 epochs, C1X L1X S1X                                                     C1X :   17, L1X :   17, S1X :   17, 
+E30 :     871 epochs, C1X L1X S1X                                                     C1X :   21, L1X :   21, S1X :   21, 
+E31 :     860 epochs, C1X L1X S1X                                                     C1X :   56, L1X :   56, S1X :   56, 
+
+missing epochs
+total: 0, which is: 0.000%
