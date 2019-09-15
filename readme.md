@@ -7,5 +7,5 @@
 #### This program is provided AS IS.
 ###### If any bugs or function-adding suggestions please come to me at: yang.jiang1@ucalgary.ca
 
-#######BRFRNX.exe             --  Compiled binery executable (visual studio 2017 x86 Release)
-#######main.cpp               --  Source code of BRFRINX.exe
+######BRFRNX.exe             --  Compiled binery executable (visual studio 2017 x86 Release)
+######main.cpp               --  Source code of BRFRINX.exe
