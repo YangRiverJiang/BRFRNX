@@ -11,7 +11,7 @@
 ###### main.cpp               --  Source code of BRFRINX.exe
 
 #### Usage on Windows
-###### CMD: BRFRNX.exe "./data/bamf2300.obs"
+###### CMD: BRFRNX.exe "./test_data/bamf2300.obs"
 ###### The program would automatically generate the report file "bamf2300.brief.txt" which is the same as the sample offered.
 ###### And open it using default text editor software while finished.
 ###### A shortcut usage is to drag the RINEX file onto a BRFRNX.exe.
