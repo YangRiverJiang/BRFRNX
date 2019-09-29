@@ -11,7 +11,8 @@
 #define RINEX_VERSION_TYPE "RINEX VERSION / TYPE"
 #define END_OF_HEADER "END OF HEADER"
 
-#define RINEX_WORKABLE "     3.02           OBSERVATION DATA"
+#define RINEX_WORKABLE_1 "     3.02           OBSERVATION DATA"
+#define RINEX_WORKABLE_2 "     3.04           OBSERVATION DATA"
 
 #define TYPES_MAX 50
 
@@ -115,7 +116,7 @@ bool skip_obs_header(FILE * fp)
 			parse_sys_types(line_buffer);
 		}
 		else if (strncmp(line_buffer + 60, RINEX_VERSION_TYPE, 20) == 0) {
-			if (strncmp(line_buffer, RINEX_WORKABLE, 36) != 0) {
+			if (strncmp(line_buffer, RINEX_WORKABLE_1, 36) != 0 && strncmp(line_buffer, RINEX_WORKABLE_2, 36) != 0) {
 				printf("not a processable file version/type: %s\n", line_buffer);
 				system("pause");
 				exit(0);
@@ -653,7 +654,7 @@ int main(int argc, char* argv[]) {
 		}
 	}
 
-	fprintf(brf, "\n\nmissing epochs\ntotal: %d, which is: %05.3f%%\n", missing_total, ceil((missing_total * 1.0 / epoch_count) * 1000) / 10);
+	fprintf(brf, "\n\nmissing epochs\ntotal: %d, which is: %05.3f%%\n", missing_total, ceil((missing_total * 1.0 / (epoch_count + epoch_count)) * 1000) / 10);
 	for (int i = 0; i < missing_total; i++) {
 		fprintf(brf, "%3d  %04d/%02d/%02d-%02d:%02d:%06.3f\n",
 			i + 1, (int)missing_time[i][0], (int)missing_time[i][1], (int)missing_time[i][2], (int)missing_time[i][3], (int)missing_time[i][4], missing_time[i][5]
