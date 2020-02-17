@@ -654,7 +654,7 @@ int main(int argc, char* argv[]) {
 		}
 	}
 
-	fprintf(brf, "\n\nmissing epochs\ntotal: %d, which is: %05.3f%%\n", missing_total, ceil((missing_total * 1.0 / (epoch_count + epoch_count)) * 1000) / 10);
+	fprintf(brf, "\n\nmissing epochs\ntotal: %d, which is: %05.3f%%\n", missing_total, ceil((missing_total * 1.0 / (epoch_count + missing_total)) * 1000) / 10);
 	for (int i = 0; i < missing_total; i++) {
 		fprintf(brf, "%3d  %04d/%02d/%02d-%02d:%02d:%06.3f\n",
 			i + 1, (int)missing_time[i][0], (int)missing_time[i][1], (int)missing_time[i][2], (int)missing_time[i][3], (int)missing_time[i][4], missing_time[i][5]
