@@ -24,6 +24,7 @@
 #define IRN_FLAG 'I'
 #define LEO_FLAG 'L'
 #define SBS_FLAG 'S'
+float epoch_diff(float * a, float * b);
 
 char line_buffer[MAX_LINE] = "";
 char SVN[5] = "";
@@ -44,6 +45,45 @@ struct OBS_FRAME {
 	double ** SBS = NULL;
 };
 OBS_FRAME OBS;
+
+struct period_item {
+	float time_first[6];
+	float time_last[6];
+	float diff_time;
+
+	period_item * next;
+};
+
+struct period_list {
+	period_item * head;
+	period_item * tail;
+	int amount;
+};
+
+void period_list_init(period_list * list) {
+	list->head = NULL;
+	list->tail = NULL;
+	list->amount = 0;
+}
+
+void period_list_add(float * tf, float * tl, period_list * list) {
+	period_item * item = (period_item*)malloc(sizeof(period_item));
+	memcpy(item->time_first, tf, sizeof(float) * 6);
+	memcpy(item->time_last, tl, sizeof(float) * 6);
+	item->diff_time = epoch_diff(tl, tf);
+	item->next = NULL;
+
+	if (list->amount == 0) {
+		list->head = item;
+		list->tail = item;
+		list->amount = 1;
+	}
+	else {
+		list->tail->next = item;
+		list->tail = item;
+		list->amount++;
+	}
+}
 
 void init_obs() {
 	OBS.GPS = (double**)malloc(sizeof(double*) * MAX_SAT_PER_SYS);
@@ -372,7 +412,7 @@ int sat_num_max[8] = { 0 };
 
 // measurement missing
 int missing_total = 0;
-float ** missing_time;
+//float ** missing_time;
 
 void period_description(float p, char * out) {
 	const int sec_of_day = 24 * 60 * 60;
@@ -534,12 +574,12 @@ int main(int argc, char* argv[]) {
 
 	printf("----missing measurement checking----\n");
 
-	missing_time = (float**)malloc(sizeof(float*) * epoch_count);
-	for (int i = 0; i < epoch_count; i++)
-	{
-		missing_time[i] = (float*)malloc(sizeof(float) * 6);
-		memset(missing_time[i], 0, sizeof(float) * 6);
-	}
+	//missing_time = (float**)malloc(sizeof(float*) * epoch_count);
+	//for (int i = 0; i < epoch_count; i++)
+	//{
+	//	missing_time[i] = (float*)malloc(sizeof(float) * 6);
+	//	memset(missing_time[i], 0, sizeof(float) * 6);
+	//}
 	missing_total = 0;
 
 	rnx = fopen(argv[1], "r");
@@ -551,6 +591,10 @@ int main(int argc, char* argv[]) {
 	memcpy(last_epoch, utc_obs, sizeof(float) * 6);
 	reset();
 
+	int missing_seg_num = 0;
+	period_list plist;
+	period_list_init(&plist);
+	
 	while (!feof(rnx)) {
 		fetch_obs(rnx);
 		double current_interval = round(epoch_diff(utc_obs, last_epoch) * 100) / 100;
@@ -561,11 +605,19 @@ int main(int argc, char* argv[]) {
 		}
 		int missing_num = (int)floor(current_interval / interval) - 1;
 		if (missing_num != 0) {
-			for (int i = 0; i < missing_num; i++) {
-				memcpy(missing_time[missing_total], utc_obs, sizeof(float) * 6);
-				epoch_forward(missing_time[missing_total], (i + 1) * interval);
-				missing_total++;
-			}
+			missing_seg_num++;
+			float tl[6], tf[6];
+			memcpy(tf, last_epoch, sizeof(float) * 6);
+			memcpy(tl, last_epoch, sizeof(float) * 6);
+			epoch_forward(tf, 1 * interval);
+			epoch_forward(tl, missing_num * interval);
+			period_list_add(tf, tl, &plist);
+			missing_total += missing_num;
+			//for (int i = 0; i < missing_num; i++) {
+			//	memcpy(missing_time[missing_total], utc_obs, sizeof(float) * 6);
+			//	epoch_forward(missing_time[missing_total], (i + 1) * interval);
+			//	missing_total++;
+			//}
 		}
 
 		memcpy(last_epoch, utc_obs, sizeof(float) * 6);
@@ -654,11 +706,20 @@ int main(int argc, char* argv[]) {
 		}
 	}
 
-	fprintf(brf, "\n\nmissing epochs\ntotal: %d, which is: %05.3f%%\n", missing_total, ceil((missing_total * 1.0 / (epoch_count + missing_total)) * 1000) / 10);
-	for (int i = 0; i < missing_total; i++) {
-		fprintf(brf, "%3d  %04d/%02d/%02d-%02d:%02d:%06.3f\n",
-			i + 1, (int)missing_time[i][0], (int)missing_time[i][1], (int)missing_time[i][2], (int)missing_time[i][3], (int)missing_time[i][4], missing_time[i][5]
+	memset(time_desc, 0, sizeof(char) * 256);
+	period_description(missing_total * interval, time_desc);
+	fprintf(brf, "\n\nmissing epochs\ntotal: %d at %d places, which is: %05.3f%% (%s)\n", missing_total, missing_seg_num, ceil((missing_total * 1.0 / (epoch_count + missing_total)) * 100000) / 1000, time_desc);
+	//for (int i = 0; i < missing_seg_num; i++) 
+	int i = 0;
+	for (period_item * item = plist.head; item; item = item->next) {
+		memset(time_desc, 0, sizeof(char) * 256);
+		period_description(epoch_diff(item->time_last, item->time_first) + interval, time_desc);
+		fprintf(brf, "%3d  %04d/%02d/%02d-%02d:%02d:%06.3f    --->    %04d/%02d/%02d-%02d:%02d:%06.3f  including %5d epochs (%s)\n",
+			i + 1, (int)item->time_first[0], (int)item->time_first[1], (int)item->time_first[2], (int)item->time_first[3], (int)item->time_first[4], item->time_first[5],
+			(int)item->time_last[0], (int)item->time_last[1], (int)item->time_last[2], (int)item->time_last[3], (int)item->time_last[4], item->time_last[5],
+			(int)round(item->diff_time/interval) + 1, time_desc
 		);
+		i++;
 	}
 
 	fclose(brf);
